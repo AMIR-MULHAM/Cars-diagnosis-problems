@@ -53,9 +53,38 @@ letter-spacing: 0.5px;
     position: relative;
     top: 200px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.5s;
+}
+.cards:hover{
+    transform: scale(1.05);
+    background-color:rgb(37, 68, 111);
+   
+}
+.cards:hover .spe2 ,
+.cards:hover .text {
+    color: white;
 }
 .spe{
     position: absolute;
     left: 31%;
     top: 720px;
+}
+.spe2{
+    text-align: center;
+    font-size: 37px;
+    padding-top: 33px;
+    color: rgb(37, 68, 111);
+    font-weight: 700;
+}
+.text{
+      color: rgb(37, 68, 111);
+      font-size: 27px;
+      text-align: center;
+      font-weight: 500;
+      padding: 9px;
+      margin-top: 30px;
+}
+#C2{
+    position: relative;
+    left: 30px;
 }
