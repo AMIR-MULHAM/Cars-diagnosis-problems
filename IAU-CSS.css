@@ -1,3 +1,12 @@
+html{
+    scroll-behavior: smooth;
+}
+#pro{
+  scroll-margin-top: 120px;
+}
+.navs{
+    background-color: rgb(0, 63, 105);
+}
 main {
     font-family: 'Frutiger', 'Myriad Pro', 'Helvetica Neue', Arial, sans-serif;
     height: 100px;
@@ -45,7 +54,7 @@ letter-spacing: 0.5px;
     display: flex;
     justify-content: center;
     gap: 70px;
-    margin-bottom: 400px;
+    margin-bottom: 250px;
 }
 .cards{
     width: 400px;
@@ -62,7 +71,7 @@ letter-spacing: 0.5px;
 }
 .cards:hover .spe2 ,
 .cards:hover .text {
-    color: white;
+    color: rgb(250, 224, 145);
 }
 .spe{
     position: absolute;
@@ -88,3 +97,72 @@ letter-spacing: 0.5px;
     position: relative;
     left: 30px;
 }
+.btns{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-right: 30px;
+}
+.btnA{
+width: 160px;
+height: 83px;
+border-radius: 10px;
+background-color: rgb(0, 63, 105);
+border: none;
+font-size: 27px;
+font-weight: 600;
+font-family: 'Frutiger', 'Myriad Pro', 'Helvetica Neue', Arial, sans-serif;
+color:white;
+transition: 0.3s;
+cursor: pointer;
+}
+.btnA:focus:not(:focus-visible) {
+  outline: none;
+}
+.btnA:hover{
+color: rgb(244, 222, 155);
+transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .spe { font-size: 2rem; }
+    .box { padding: 0 5% 60px; }
+    .car { width: 95%; }
+}
+#box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+}
+.fixed-bottom{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-right:10px ;
+    margin-bottom: 8px;
+    justify-self: flex-end;
+    background-color: rgb(0, 63, 105);
+    transition: 0.3s;
+    cursor: pointer;
+}
+svg{
+    fill: white;
+}
+.fixed-bottom:hover{
+    transform: scale(1.13);
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+}
+.fixed-bottom:hover svg{
+   fill: rgb(0, 63, 105);
+}
+.tit{
+    border-radius: 50%;
+}
+
+
+
