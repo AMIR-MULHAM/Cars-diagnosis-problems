@@ -1,6 +1,11 @@
 html{
     scroll-behavior: smooth;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 #pro{
   scroll-margin-top: 120px;
 }
@@ -13,12 +18,35 @@ main {
     width: 100%;
     background-image: url("s.png"),no-repeat,;
     background-size: cover; 
-   
+    display: block;
 }
 .car{
+    width: 33.33333%;
+    height: 600px;
+    position: relative;
+    float: left;
+}
+figure{
+    width: 300%;
+    position: relative;
+    left: 0;
+    animation: 12s car infinite;
+}
+.img-slider{
+    overflow: hidden;
     width: 100%;
     height: 600px;
 }
+@keyframes car{
+    15%{left: 0%;}
+    30%{left: 0%;}
+    45%{left: -100%;}
+    60%{left: -100%;}
+    75%{left: -200%;}
+    90%{left: -200%;}
+    100%{left: 0%;}
+}
+
 .navbar{
  width: 100%;
  background: transparent;
@@ -32,7 +60,7 @@ main {
     color: rgb(37, 68, 111);
 }
 .part{
-    width: 490px;
+    width: 570px;
     height: 500px;
     box-sizing: border-box;
     color: white;
@@ -40,11 +68,11 @@ main {
     right: 140px;
     top: 30px;
     border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); 
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 .esay{
-font-size: 26px;
+font-size: 4rem;
 margin: 7px;
 padding: 7px;
 font-weight: 500;
@@ -74,9 +102,9 @@ letter-spacing: 0.5px;
     color: rgb(250, 224, 145);
 }
 .spe{
-    position: absolute;
-    left: 31%;
-    top: 720px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: -150px;
 }
 .spe2{
     text-align: center;
@@ -95,7 +123,7 @@ letter-spacing: 0.5px;
 }
 #C2{
     position: relative;
-    left: 30px;
+    left: 38px;
 }
 .btns{
     display: flex;
@@ -105,16 +133,16 @@ letter-spacing: 0.5px;
 }
 .btnA{
 width: 160px;
-height: 83px;
-border-radius: 10px;
+height: 70px;
 background-color: rgb(0, 63, 105);
 border: none;
 font-size: 27px;
 font-weight: 600;
 font-family: 'Frutiger', 'Myriad Pro', 'Helvetica Neue', Arial, sans-serif;
 color:white;
-transition: 0.3s;
+transition: 0.3s ease;
 cursor: pointer;
+border-bottom: 3px solid transparent;
 }
 .btnA:focus:not(:focus-visible) {
   outline: none;
@@ -122,6 +150,11 @@ cursor: pointer;
 .btnA:hover{
 color: rgb(244, 222, 155);
 transform: scale(1.1);
+border-bottom: 3px solid rgb(250, 224, 145);
+}
+.btnA::after{
+    border-bottom: 3px solid rgb(250, 224, 145);
+
 }
 @media (max-width: 768px) {
     .spe { font-size: 2rem; }
@@ -163,6 +196,203 @@ svg{
 .tit{
     border-radius: 50%;
 }
+.para{
+background-color: rgb(0, 63, 105);
+width: 100%;
+height: 900px;
+display: flex;
+}
+.para-box{
+    width: 1000px;
+    height: 550px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 27px;
+    border: 5px solid rgb(250, 224, 145);
+}
+.spe3{
+   position: absolute;
+   left: 43%;
+   margin-top: 80px;
+   font-size: 40px;
+   font-weight: 600;
+   color: rgb(250, 224, 145);
+}
+.b{
+    position: absolute;
+    left:90%;
+    top: 3000px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(0, 63, 105);
+}
+.b2{
+    position: absolute;
+    width: 50px;
+    right:90%;
+    top: 3000px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+    background-color: grey;
+    font-size: 1.5rem;
+    color: black;
 
+}
+.b:hover,
+.b2:hover{
+transform:scale3d(1.2, 1.2, 1);
+background-color: rgb(132, 132, 132);
+}
+.para1{
+    width: 930px;
+    height: 510px;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    position: absolute;
+    left: 280px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.b:focus:not(:focus-visible) {
+  outline: none;
+}
+.b2:focus:not(:focus-visible) {
+  outline: none;
+}
+.circle{
+    background-color: grey;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.17s ease;
+}
+#cir{
+position: relative;
+display: flex;
+align-items: flex-end;
+gap: 9px;
+left: 420px;
+margin-bottom: 5px;
+}
+#cir1{
+    background-color: rgb(0, 63, 105);
+}
+.program{
+    width: 1200px;
+    height: 500px;
+    border: 4px solid rgb(0, 63, 105);
+    position: relative;
+    left: 10.7%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+}
+.input{
+    border-right: 3px solid rgb(250, 224, 145);
+    height: 100%;
+    width: 600px;
+}
+.output{
+    border-left: 3px solid rgb(250, 224, 145);
+    height: 100%;
+    width: 600px;
+}
+.textQ1{
+   width: 100%;
+   position: relative;
+   background-color: rgb(0, 63, 105);
+   font-size: 2.2rem;
+   color: rgb(250, 224, 145);
+}
+.textQ2{
+   position: relative;
+   width: 100%;
+   background-color: rgb(0, 63, 105);
+   font-size: 2.2rem;
+   color: rgb(250, 224, 145);
 
-
+}
+.textQ1 span{
+    position: relative;
+    left: 130px;
+}
+.textQ2 span{
+    position: relative;
+    left: 170px;
+}
+.write{
+    width: 100%;
+    height: 78%;
+    resize:none;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copy{
+    color: rgb(143, 143, 143);
+    font-size: 1.4rem;
+}
+.socF .icons svg{
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  gap: 5px;
+  fill:rgb(143, 143, 143);
+  stroke:rgb(143, 143, 143);
+  transition: 0.3s;
+}
+.icons:hover svg{
+    fill: white;
+}
+.queries{
+    height: 40px;
+    width: 60px;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    background-color:rgb(0, 63, 105);
+    border: none;
+    color: white;
+    padding: auto;
+    margin-left: 530px;
+    margin-top: 7px;
+    transition: 0.3s ease-out;
+    outline: none;
+    cursor: pointer;
+}
+.queries span{
+    margin-top: 17px;
+    
+}
+.queries:hover{
+    color:rgb(250, 224, 145);
+    transform: scale(1.05);
+}
+.queries:focus:not(:focus-visible) {
+  outline: none;
+}
+#q1{
+    margin-top: 397px;
+}
