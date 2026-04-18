@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    background-color: #FFFFFF;
 }
 html, body {
     margin: 0;
@@ -29,8 +30,8 @@ main {
 figure{
     width: 300%;
     position: relative;
-    left: 0;
-    animation: 12s car infinite;
+    transition: transform 0.8s ease;
+    animation: 13.5s car infinite;
 }
 .img-slider{
     overflow: hidden;
@@ -38,13 +39,12 @@ figure{
     height: 600px;
 }
 @keyframes car{
-    15%{left: 0%;}
-    30%{left: 0%;}
-    45%{left: -100%;}
-    60%{left: -100%;}
-    75%{left: -200%;}
-    90%{left: -200%;}
-    100%{left: 0%;}
+    16.665%{left: 0%;}
+    33.333%{left: 0%;}
+    49.995%{left: -100%;}
+    66.666%{left: -100%;}
+    83.331%{left: -200%;}
+    99.996%{left: -200%;}
 }
 
 .navbar{
@@ -60,23 +60,47 @@ figure{
     color: rgb(37, 68, 111);
 }
 .part{
-    width: 570px;
-    height: 500px;
-    box-sizing: border-box;
-    color: white;
+    width: 500px;
+    height: 600px;
     position: relative;
-    right: 140px;
-    top: 30px;
-    border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0.6); 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    bottom: 10px;
+    background: linear-gradient( 90deg,
+    rgb(250, 224, 145),
+    #01514F,
+    rgb(250, 224, 145)); 
+    animation: move 6s linear infinite;
+    background-size: 200% 100%;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    font-family:"univers LT",Arial, sans-serif ;
+    font-weight: 550;
+    text-shadow: 2px 2px 5px black;
 }
-.esay{
-font-size: 4rem;
-margin: 7px;
-padding: 7px;
-font-weight: 500;
-letter-spacing: 0.5px;
+/* @keyframes move{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;} */
+
+.esay-upgrade{
+    font-size: 3rem;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    color: white;
+    text-align: center;
+    padding-left: 30px;
+    margin-right: 50px;
+    letter-spacing: 2px;
+}
+.circle2{
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 19px;
+    height: 19px;
+    transition: 0.17s ease;
+    margin-bottom: 20px;
 }
 .box{
     display: flex;
@@ -103,8 +127,11 @@ letter-spacing: 0.5px;
 }
 .spe{
     text-align: center;
-    margin-top: 120px;
+    margin-top: 30px;
     margin-bottom: -150px;
+    text-shadow: 1.2px 1.2px 2.5px black;
+    letter-spacing: 1.4px;
+    color: #01514F;
 }
 .spe2{
     text-align: center;
@@ -136,7 +163,7 @@ width: 160px;
 height: 70px;
 background-color: rgb(0, 63, 105);
 border: none;
-font-size: 27px;
+font-size: 20px;
 font-weight: 600;
 font-family: 'Frutiger', 'Myriad Pro', 'Helvetica Neue', Arial, sans-serif;
 color:white;
@@ -170,6 +197,10 @@ border-bottom: 3px solid rgb(250, 224, 145);
     justify-content: center;
     position: relative;
     top: 150px;
+    text-shadow: 1px 2px 2px black;
+    color: #01514F;
+    letter-spacing: 1px;
+    margin-top: -100px;
 }
 .fixed-bottom{
     border-radius: 50%;
@@ -197,60 +228,62 @@ svg{
     border-radius: 50%;
 }
 .para{
-background-color: rgb(0, 63, 105);
+background-color: #01514F; 
 width: 100%;
-height: 900px;
+height: 700px;
 display: flex;
+justify-content: flex-start;
 }
 .para-box{
     width: 1000px;
     height: 550px;
     margin: auto;
+    margin-left: -210px;
     display: flex;
     justify-content: center;
     align-self: center;
     background-color: white;
-    border-radius: 27px;
-    border: 5px solid rgb(250, 224, 145);
+    align-content: flex-end;
+    box-shadow: 7px 7px rgba(0,0,0,0.3);
 }
-.spe3{
-   position: absolute;
-   left: 43%;
-   margin-top: 80px;
-   font-size: 40px;
+.spe34{
+   position: relative;
+   left: 76%;
+   top: 30%;
+   font-size: 5rem;
    font-weight: 600;
    color: rgb(250, 224, 145);
+   text-shadow: 2px 2px 5px black;
 }
 .b{
-    position: absolute;
-    left:90%;
-    top: 3000px;
     width: 50px;
     height: 50px;
-    margin: auto;
     border-radius: 50%;
     border: none;
-    transition: 0.3s;
     cursor: pointer;
     font-size: 1.5rem;
-    color: rgb(0, 63, 105);
+    color: #01514F;
+    transition: 0.3s;
 }
 .b2{
-    position: absolute;
     width: 50px;
-    right:90%;
-    top: 3000px;
     height: 50px;
-    margin: auto;
     border-radius: 50%;
     border: none;
-    transition: 0.3s ease;
     cursor: pointer;
     background-color: grey;
     font-size: 1.5rem;
     color: black;
+    transition: 0.3s;
 
 }
+.b2 , .b{
+    margin-left: 40px;
+    position: relative;
+    right: 170px;
+    top: 85%;
+}
+
 .b:hover,
 .b2:hover{
 transform:scale3d(1.2, 1.2, 1);
@@ -262,8 +295,8 @@ background-color: rgb(132, 132, 132);
     font-size: 30px;
     font-weight: 500;
     text-align: left;
-    position: absolute;
     left: 280px;
+    margin-left: 40px;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -274,28 +307,28 @@ background-color: rgb(132, 132, 132);
   outline: none;
 }
 .circle{
-    background-color: grey;
+    background-color: white;
+    border: 2px solid #01514F;
     border-radius: 50%;
     width: 19px;
     height: 19px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: 0.17s ease;
 }
 #cir{
-position: relative;
 display: flex;
 align-items: flex-end;
 gap: 9px;
+margin-right: 20px;
 left: 420px;
 margin-bottom: 5px;
 }
 #cir1{
-    background-color: rgb(0, 63, 105);
+    background-color: #01514F;
 }
 .program{
     width: 1200px;
     height: 500px;
-    border: 4px solid rgb(0, 63, 105);
+    border: 4px solid #01514F;
     position: relative;
     left: 10.7%;
     margin-top: 70px;
@@ -315,16 +348,18 @@ margin-bottom: 5px;
 .textQ1{
    width: 100%;
    position: relative;
-   background-color: rgb(0, 63, 105);
+   background-color: #01514F;
    font-size: 2.2rem;
    color: rgb(250, 224, 145);
+   text-shadow: 1px 2px 2px black;
 }
 .textQ2{
    position: relative;
    width: 100%;
-   background-color: rgb(0, 63, 105);
+   background-color: #01514F;
    font-size: 2.2rem;
    color: rgb(250, 224, 145);
+   text-shadow: 1px 2px 2px black;
 
 }
 .textQ1 span{
@@ -341,7 +376,9 @@ margin-bottom: 5px;
     resize:none;
     border: none;
     outline: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* text-shadow: 1px 2px 2px black; */
 }
 footer{
     width: 100%;
@@ -372,7 +409,7 @@ footer{
     width: 60px;
     border-radius: 25px;
     font-size: 1.3rem;
-    background-color:rgb(0, 63, 105);
+    background-color:#01514F;
     border: none;
     color: white;
     padding: auto;
@@ -395,4 +432,83 @@ footer{
 }
 #q1{
     margin-top: 397px;
+}
+.examples{
+    display: none;
+}
+.result{
+    width: 100%;
+    height: 78%;
+    resize:none;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+#UI-section{
+    background-color: #01514F;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chat-box{
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    overflow-y: auto;
+    padding: 20px;
+    color: black;
+    box-shadow: 7px 7px rgba(0,0,0,0.3);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.UI-interface{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+    
+}
+.UI-input{
+    width: 600px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    padding: 0 15px;
+    background: #e6dfdf;
+}
+.UI-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(250, 224, 145);
+    cursor: pointer;
+    color: #01514F;
+    font-size: 1.13rem;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s ease;
+    letter-spacing: 0.7px;
+}
+.UI-btn span{
+    margin: -3px;
+}
+.spe342{
+   font-size: 5rem;
+   font-weight: 600;
+   color: rgb(250, 224, 145);
+   text-shadow: 2px 2px 5px black;
+   margin: 10px;
+}
+.UI-btn:hover{
+    background-color: rgb(209, 208, 208);
+}
+.UI-btn:focus:not(:focus-visible) {
+  outline: none;
 }
