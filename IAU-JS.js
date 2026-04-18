@@ -1,6 +1,7 @@
 const nextBTN = document.querySelector('.b');
 const prevBTN = document.querySelector('.b2');
 const para = document.querySelector('.para1');
+const fixedBottom = document.querySelector('#fixed');
 
 let texts = [
   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto porro deleniti commodi eligendi, illo voluptas laborum repellat tempora obcaecati fugiat aspernatur voluptatibus, corrupti asperiores nam. Libero debitis laudantium facilis blanditiis.",
@@ -392,4 +393,11 @@ inputField.addEventListener('keydown', e => {
   if (e.key === 'Enter') handleQuery();
 });
 
-showWelcome();
+RunBtn.disabled = true;
+inputField.disabled = true;
+
+fixedBottom.addEventListener('click', () => {
+  showWelcome();
+  RunBtn.disabled = false;
+  inputField.disabled = false;
+});
