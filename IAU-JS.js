@@ -397,6 +397,7 @@ RunBtn.disabled = true;
 inputField.disabled = true;
 
 fixedBottom.addEventListener('click', () => {
+  console.log('Working');
   showWelcome();
   RunBtn.disabled = false;
   inputField.disabled = false;
