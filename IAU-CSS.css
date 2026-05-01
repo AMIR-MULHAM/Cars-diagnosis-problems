@@ -145,7 +145,7 @@ figure{
       font-size: 27px;
       text-align: center;
       font-weight: 500;
-      padding: 9px;
+      padding: 14px;
       margin-top: 30px;
 }
 #C2{
@@ -292,7 +292,7 @@ background-color: rgb(132, 132, 132);
 .para1{
     width: 930px;
     height: 510px;
-    font-size: 30px;
+    font-size: 37px;
     font-weight: 500;
     text-align: left;
     left: 280px;
@@ -312,7 +312,7 @@ background-color: rgb(132, 132, 132);
     border-radius: 50%;
     width: 19px;
     height: 19px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
 }
 #cir{
 display: flex;
@@ -324,51 +324,6 @@ margin-bottom: 5px;
 }
 #cir1{
     background-color: #01514F;
-}
-.program{
-    width: 1200px;
-    height: 500px;
-    border: 4px solid #01514F;
-    position: relative;
-    left: 10.7%;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    display: flex;
-}
-.input{
-    border-right: 3px solid rgb(250, 224, 145);
-    height: 100%;
-    width: 600px;
-}
-.output{
-    border-left: 3px solid rgb(250, 224, 145);
-    height: 100%;
-    width: 600px;
-}
-.textQ1{
-   width: 100%;
-   position: relative;
-   background-color: #01514F;
-   font-size: 2.2rem;
-   color: rgb(250, 224, 145);
-   text-shadow: 1px 2px 2px black;
-}
-.textQ2{
-   position: relative;
-   width: 100%;
-   background-color: #01514F;
-   font-size: 2.2rem;
-   color: rgb(250, 224, 145);
-   text-shadow: 1px 2px 2px black;
-
-}
-.textQ1 span{
-    position: relative;
-    left: 130px;
-}
-.textQ2 span{
-    position: relative;
-    left: 170px;
 }
 .write{
     width: 100%;
@@ -403,35 +358,6 @@ footer{
 }
 .icons:hover svg{
     fill: white;
-}
-.queries{
-    height: 40px;
-    width: 60px;
-    border-radius: 25px;
-    font-size: 1.3rem;
-    background-color:#01514F;
-    border: none;
-    color: white;
-    padding: auto;
-    margin-left: 530px;
-    margin-top: 7px;
-    transition: 0.3s ease-out;
-    outline: none;
-    cursor: pointer;
-}
-.queries span{
-    margin-top: 17px;
-    
-}
-.queries:hover{
-    color:rgb(250, 224, 145);
-    transform: scale(1.05);
-}
-.queries:focus:not(:focus-visible) {
-  outline: none;
-}
-#q1{
-    margin-top: 397px;
 }
 .examples{
     display: none;
@@ -474,38 +400,43 @@ footer{
     bottom: 0;
     
 }
-.UI-input{
-    width: 600px;
-    height: 45px;
-    border-radius: 25px;
-    border: none;
-    padding: 0 15px;
-    background: #e6dfdf;
+
+.yes-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 14px 50px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
 }
-.UI-input:disabled {
-  opacity: 0.5;
+
+.yes-btn:hover { background-color: #1b5e20; transform: scale(1.05); }
+
+.no-btn {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 14px 50px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.no-btn , .yes-btn{
+    text-shadow: 2px 2px 1px black;
+    border-radius: 0px;
+}
+
+.no-btn:hover  { background-color: #b71c1c; transform: scale(1.05); }
+
+.yes-btn:disabled, .no-btn:disabled {
+  opacity: 0.3;
   cursor: not-allowed;
-}
-.UI-btn{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgb(250, 224, 145);
-    cursor: pointer;
-    color: #01514F;
-    font-size: 1.13rem;
-    text-align: center;
-    font-weight: 600;
-    transition: 0.3s ease;
-    letter-spacing: 0.7px;
-}
-.UI-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.UI-btn span{
-    margin: -3px;
+  transform: none;
 }
 .spe342{
    font-size: 5rem;
@@ -513,10 +444,4 @@ footer{
    color: rgb(250, 224, 145);
    text-shadow: 2px 2px 5px black;
    margin: 10px;
-}
-.UI-btn:hover{
-    background-color: rgb(209, 208, 208);
-}
-.UI-btn:focus:not(:focus-visible) {
-  outline: none;
 }
