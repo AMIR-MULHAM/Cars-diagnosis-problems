@@ -120,6 +120,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-Made with ❤️ by the Car Diagnostic Team · © 2026 Amir Mulham Al-Sabea
+ © 2026 Amir Mulham Al-Sabea
 
 </div>
